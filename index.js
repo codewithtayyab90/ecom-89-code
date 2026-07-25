@@ -11,7 +11,7 @@ const authRouter = require('./routes/auths')
 connectDB()
 app.use(express.json())
 app.use(cors({origin: "http://localhost:5173"}))
-app.use("/", productRouter)
+app.use("/products", productRouter)
 app.use("/", authRouter)
 app.all('/*path', (req, res) => {
     res.send('404 Not Found')

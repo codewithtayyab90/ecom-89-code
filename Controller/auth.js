@@ -2,6 +2,7 @@ const authModel = require("../models/Auths")
 const bcrypt = require("bcryptjs")
 
 const register = async (req, res) => {
+    console.log(req.body)
     const {username, email, password} = req.body
     const existingUser = await authModel.findOne({email})
     if(existingUser){
