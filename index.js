@@ -10,7 +10,7 @@ const authRouter = require('./routes/auths')
 
 connectDB()
 app.use(express.json())
-app.use(cors({origin: "https://e-commerce-tayyab.vercel.app/"}))
+app.use(cors({origin: "https://e-commerce-tayyab.vercel.app"}))
 app.use("/products", productRouter)
 app.use("/", authRouter)
 app.all('/*path', (req, res) => {
